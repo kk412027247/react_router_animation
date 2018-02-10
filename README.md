@@ -7,6 +7,10 @@ react-transition-group 是新版的是路由，旧版的 ReactCSSTransitionGroup
 community. Its 1.x branch is completely API-compatible with the existing addons.
 Please file bugs and feature requests in the new repository.
 
+[动画组件文档](https://reactcommunity.org/react-transition-group/#Transition-prop-addEndListener)
+
+[路由组件文档](https://reacttraining.com/react-router/web/guides/quick-start)
+
 
 直接上代码
 
@@ -70,6 +74,7 @@ const AnimationExample = () => (
           </ul>
 
           <div style={styles.content}>
+            // 和平时使用动画组件没啥区别，在渲染的路由的地方加一个用动画组件抱住，并添加css属性即可；
             <TransitionGroup>
               <CSSTransition
                 key={location.key}
