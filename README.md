@@ -1,7 +1,7 @@
 ### react应用的路由切换动画
 
 react-transition-group 是新版的是路由，旧版的 ReactCSSTransitionGroup 官方已经不再维护,以下是官方说明。
-新版的动画组件比旧版的操作更加简明。强力推荐直接使用新版动画
+新版的动画组件比旧版的操作更加简明。强力推荐直接使用新版动画组件
 
 >ReactTransitionGroup and ReactCSSTransitionGroup have been moved to the react-transition-group package that is maintained by the
 community. Its 1.x branch is completely API-compatible with the existing addons.
@@ -25,7 +25,8 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
-  // 这个动画是页面首次加载的动画，一定要用 TransitionGroup 包着 CSSTransition，动画才有效，理由我不知道，反正不包着不生效。
+  // 这个动画是页面首次加载的动画，一定要用 TransitionGroup 包着 CSSTransition，
+  // 动画才有效，理由我不知道，反正不包着不生效。
   <TransitionGroup>
     <CSSTransition
       appear={true}
@@ -74,7 +75,7 @@ const AnimationExample = () => (
           </ul>
 
           <div style={styles.content}>
-            // 和平时使用动画组件没啥区别，在渲染的路由的地方加一个用动画组件抱住，并添加css属性即可；
+            // 和平时使用动画组件没啥区别，在渲染的路由的地方加一个用动画组件包住，并添加css属性即可；
             <TransitionGroup>
               <CSSTransition
                 key={location.key}
