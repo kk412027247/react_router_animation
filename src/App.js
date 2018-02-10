@@ -37,9 +37,6 @@ const AnimationExample = () => (
                 <Switch location={location}>
                   <Route exact path="/hsl/:h/:s/:l" component={HSL} />
                   <Route exact path="/rgb/:r/:g/:b" component={RGB} />
-                  {/* Without this `Route`, we would get errors during
-                    the initial transition from `/` to `/hsl/10/90/50`
-                */}
                   <Route render={() => <div>Not Found</div>} />
                 </Switch>
               </CSSTransition>
