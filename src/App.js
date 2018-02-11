@@ -7,7 +7,7 @@ import {
   Link,
   Redirect
 } from "react-router-dom";
-import './App.css'
+import './App.css';
 
 const AnimationExample = () => (
   <BrowserRouter>

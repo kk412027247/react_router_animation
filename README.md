@@ -26,7 +26,7 @@ import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
   // 这个动画是页面首次加载的动画，一定要用 TransitionGroup 包着 CSSTransition，
-  // 动画才有效，理由我不知道，反正不包着不生效。
+  // 因为TransitionGroup会给CSSTransition加一个in属性，这个属性决定加载与卸载。
   <TransitionGroup>
     <CSSTransition
       appear={true}
